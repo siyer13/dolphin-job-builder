@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+
+        <changeSet id="1" author="Sridhar Iyer" context="dev">
+            <comment>Create tables in job schema</comment>
+            <sql>
+                <![CDATA[
+                    CREATE TABLE job.jobs (
+                        "job_id" varchar NOT NULL,
+                        "job_name" varchar NOT NULL,
+                        run_date date NULL,
+                        CONSTRAINT job_id_pk PRIMARY KEY (job_id)
+                    );
+                ]]>
+        </sql>
+        </changeSet>
+        <changeSet id="2" author="Sridhar Iyer"  context="dev">
+            <comment>Insert jobs data</comment>
+            <sql>
+                <![CDATA[
+                    INSERT INTO job.jobs (
+                        "job_id",
+                        "job_name",
+                        "run_date"
+                    ) VALUES (
+                        'job_001_20200718',
+                        'test_job',
+                        '2020-07-18'
+                    );
+                ]]>
+            </sql>
+        </changeSet>
+            -->
+</databaseChangeLog>
+
