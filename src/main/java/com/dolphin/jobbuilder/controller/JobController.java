@@ -3,14 +3,16 @@ package com.dolphin.jobbuilder.controller;
 import com.dolphin.jobbuilder.ms.Job;
 import com.dolphin.jobbuilder.ms.JobSubmit;
 import com.dolphin.jobbuilder.service.JobService;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+import java.text.ParseException;
 import java.util.List;
 
 @RestController
@@ -27,5 +29,5 @@ public class JobController {
     }
 
     @PostMapping("/submit_job/")
-    public Job submitJob(@RequestBody JobSubmit jobSubmit) { return jobService.submitJob(jobSubmit);}
+    public Job submitJob(@RequestBody JobSubmit jobSubmit) throws ParseException { return jobService.submitJob(jobSubmit);}
 }
